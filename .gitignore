@@ -1,32 +1,36 @@
-# Node modules (bahut heavy)
+# Node modules
 node_modules/
 
-# Environment variables (sensitive data)
+# Environment variables (SENSITIVE! - NEVER COMMIT)
 .env
 .env.local
 .env.production
 
 # Logs
-logs/
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Dependency lock files (optional)
+# Dependency lock files
 package-lock.json
+yarn-lock.json
 
-# Recordings folder (local videos)
+# Recordings
 recordings/
 temp_*.webm
 *.webm
 
-# IDE folders
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Netlify (agar use kar rahe to)
-.netlify/
+# Server.js (agar Netlify Functions use kar rahe ho to)
+server.js
