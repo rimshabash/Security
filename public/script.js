@@ -267,9 +267,7 @@ function stopContinuousRecording() {
     }
 }
 
-/* ===== YAHAN IMPORTANT CHANGE HUA HAI ===== */
-/* Upload to Google Drive - URL FIXED */
-/* Upload to Google Drive */
+
 /* Upload to Google Drive */
 async function uploadToDrive(segmentNumber) {
     const dataURL = localStorage.getItem("recordedVideo");
@@ -281,10 +279,10 @@ async function uploadToDrive(segmentNumber) {
     try {
         const fileName = `webcam_segment_${segmentNumber}_${Date.now()}.webm`;
         
-        console.log(`📤 Uploading segment ${segmentNumber} to Drive...`);
+        console.log(`Uploading segment ${segmentNumber} to Drive...`);
         
-        // 🔴 YAHAN SE /upload-to-drive HATAO
-        // ✅ YEH SAHI URL HAI:
+       
+      
         const response = await fetch('/.netlify/functions/api/upload', {
             method: 'POST',
             headers: {
@@ -544,7 +542,7 @@ style.textContent = `
     }
     
     .security-tips li::before {
-        content: '🔒';
+       
         position: absolute;
         left: 0;
         color: #4CAF50;
@@ -605,6 +603,6 @@ window.addEventListener('load', async function() {
         const data = await response.json();
         console.log('Server connected:', data);
     } catch (err) {
-        console.error('❌ Server not connected:', err);
+        console.error('Server not connected:', err);
     }
 });
