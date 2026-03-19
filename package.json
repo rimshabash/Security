@@ -2,17 +2,16 @@
   "name": "webcam-security-demo",
   "version": "1.0.0",
   "description": "Webcam Security Demo",
+  "main": "netlify/functions/api.js",
   "scripts": {
-    "dev": "netlify dev"
+    "start": "netlify dev"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.6.1",
     "express": "^4.18.2",
     "googleapis": "^126.0.1",
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
-    "netlify-cli": "^24.3.0"
+    "netlify-cli": "^17.0.0"
   }
 }
