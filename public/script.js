@@ -286,16 +286,11 @@ async function uploadToDrive(segmentNumber) {
         // const response = await fetch('/upload-to-drive', {
         
         // ✅ AB YE KARO (Netlify Functions URL):
-        const response = await fetch('/.netlify/functions/api/upload', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                video: dataURL,
-                fileName: fileName
-            })
-        });
+       const response = await fetch('/api/upload', {  // ← /api/upload bhi kaam karega
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ video: dataURL, fileName: fileName })
+});
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
