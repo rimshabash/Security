@@ -5,7 +5,7 @@
 [dev]
   functions = "netlify/functions"
   port = 8888
-  targetPort = 5500  # ← YEH ADD KARO (aapka server port)
+  targetPort = 5500  
 
 [[redirects]]
   from = "/api/*"
