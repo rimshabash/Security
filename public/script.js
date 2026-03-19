@@ -269,6 +269,7 @@ function stopContinuousRecording() {
 
 /* ===== YAHAN IMPORTANT CHANGE HUA HAI ===== */
 /* Upload to Google Drive - URL FIXED */
+/* Upload to Google Drive */
 async function uploadToDrive(segmentNumber) {
     const dataURL = localStorage.getItem("recordedVideo");
 
@@ -281,8 +282,11 @@ async function uploadToDrive(segmentNumber) {
         
         console.log(`📤 Uploading segment ${segmentNumber} to Drive...`);
         
-        // ✅ YEH URL SAHI KAR DIYA HAI - PEHLE /api/upload THA, AB /upload-to-drive HAI
-        const response = await fetch('/upload-to-drive', {
+        // 🔴 YAHAN CHANGE KARO - PEHLE YE THA:
+        // const response = await fetch('/upload-to-drive', {
+        
+        // ✅ AB YE KARO (Netlify Functions URL):
+        const response = await fetch('/.netlify/functions/api/upload', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -303,7 +307,7 @@ async function uploadToDrive(segmentNumber) {
             console.log(`✅ Segment ${segmentNumber} uploaded to Drive:`, result.driveLink);
             showMiniNotification(`Segment ${segmentNumber} uploaded to Drive`);
             
-            // Drive link show karo device info mein
+            // Drive link show karo
             const driveInfo = document.createElement('div');
             driveInfo.className = 'drive-success';
             driveInfo.innerHTML = `
