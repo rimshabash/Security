@@ -25,9 +25,9 @@ try {
     );
     oauth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
     drive = google.drive({ version: 'v3', auth: oauth2Client });
-    console.log('✅ Google Drive configured');
+    console.log('Google Drive configured');
 } catch (error) {
-    console.error('❌ Drive config error:', error.message);
+    console.error('Drive config error:', error.message);
 }
 
 // Helper Functions
