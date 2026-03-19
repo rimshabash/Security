@@ -1,0 +1,32 @@
+# Node modules (bahut heavy)
+node_modules/
+
+# Environment variables (sensitive data)
+.env
+.env.local
+.env.production
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependency lock files (optional)
+package-lock.json
+
+# Recordings folder (local videos)
+recordings/
+temp_*.webm
+*.webm
+
+# IDE folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Netlify (agar use kar rahe to)
+.netlify/

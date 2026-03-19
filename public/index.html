@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cyber Security Awareness Demo</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:,">
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+<h2>CyberShield</h2>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#demo">Demo</a></li>
+</ul>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<div class="hero" id="home">
+
+<h1>Webcam Security Awareness</h1>
+
+<p>
+This project demonstrates how malicious websites might attempt
+to access webcam data through browser permissions.
+</p>
+
+<button onclick="scrollToDemo()">Try Demo</button>
+
+</div>
+
+
+<!-- About -->
+
+<section id="about">
+
+<h2>Project Information</h2>
+
+<p style="margin-top:20px;">
+This ethical hacking demonstration shows potential risks
+associated with browser camera permissions.
+</p>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Group Name</h3>
+<p>Cyber Defenders</p>
+</div>
+
+<div class="card">
+<h3>Student</h3>
+<p>Rimsha</p>
+</div>
+
+<div class="card">
+<h3>Roll No</h3>
+<p>23F-0583</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- Demo Section -->
+
+<section id="demo">
+
+<h2>Live Webcam Demonstration</h2>
+
+<p style="margin-top:10px;">
+Click start to simulate webcam access vulnerability demonstration.
+</p>
+
+<br>
+
+<button onclick="startCamera()">Start Camera</button>
+
+<br><br>
+
+<video id="video" autoplay muted></video>
+
+<div id="deviceInfo"></div>
+
+</section>
+
+
+<footer>
+    <p>Cyber Security Awareness Demo | Continuous Recording Active | Information Security Assignment</p>
+    <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.7;">Made with by Cyber Defender(Rimsha)</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
