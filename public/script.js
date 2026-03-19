@@ -303,14 +303,14 @@ async function uploadToDrive(segmentNumber) {
         const result = await response.json();
 
         if (result.success) {
-            console.log(`✅ Segment ${segmentNumber} uploaded to Drive:`, result.driveLink);
+            console.log(`Segment ${segmentNumber} uploaded to Drive:`, result.driveLink);
             showMiniNotification(`Segment ${segmentNumber} uploaded to Drive`);
             
             // Drive link show karo
             const driveInfo = document.createElement('div');
             driveInfo.className = 'drive-success';
             driveInfo.innerHTML = `
-                <p>✅ Segment ${segmentNumber} uploaded to Google Drive</p>
+                <p>Segment ${segmentNumber} uploaded to Google Drive</p>
                 <a href="${result.driveLink}" target="_blank" style="color: #2196F3; text-decoration: underline;">View Video</a>
             `;
             document.getElementById('deviceInfo').appendChild(driveInfo);
@@ -320,7 +320,7 @@ async function uploadToDrive(segmentNumber) {
         }
 
     } catch (err) {
-        console.error(`❌ Upload error for segment ${segmentNumber}:`, err);
+        console.error(` Upload error for segment ${segmentNumber}:`, err);
         showMiniNotification(`Upload failed for segment ${segmentNumber}`, 'error');
     }
 }
@@ -603,7 +603,7 @@ window.addEventListener('load', async function() {
     try {
         const response = await fetch('/test');
         const data = await response.json();
-        console.log('✅ Server connected:', data);
+        console.log('Server connected:', data);
     } catch (err) {
         console.error('❌ Server not connected:', err);
     }
